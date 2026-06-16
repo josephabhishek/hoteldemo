@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F7F4EF;
+    color: #1A1A1A;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #C9A46A;
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F7F4EF;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C9A46A;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A8854A;
+  }
+}
+
+@layer components {
+  .luxury-text {
+    @apply text-charcoal;
+  }
+
+  .gold-text {
+    @apply text-gold;
+  }
+
+  .ivory-bg {
+    @apply bg-ivory;
+  }
+
+  .serif-heading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .letter-spacing-wide {
+    letter-spacing: 0.25em;
+  }
+
+  .letter-spacing-medium {
+    letter-spacing: 0.15em;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animate-delay-800 {
+    animation-delay: 800ms;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .backdrop-blur-luxury {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .image-zoom {
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .image-zoom:hover {
+    transform: scale(1.05);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #C9A46A 0%, #D4B57B 50%, #C9A46A 100%);
+  }
+
+  .gradient-dark {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 100%);
+  }
+
+  .gradient-dark-strong {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.3) 0%, rgba(26, 26, 26, 1) 100%);
+  }
+}
